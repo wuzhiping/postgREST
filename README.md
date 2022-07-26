@@ -45,7 +45,7 @@ docker run -it -d -p 3009:3000 \
     #  - "3000:3000"
     environment:
       PGRST_DB_URI: postgres://axelor:axelor@postgresdb:5432/axelor
-      PGRST_DB_SCHEMA: public
+      PGRST_DB_SCHEMA: public,dev
       PGRST_DB_ANON_ROLE: axelor
       PGRST_OPENAPI_SERVER_PROXY_URI: http://www.xyz.com:3000
     depends_on:
