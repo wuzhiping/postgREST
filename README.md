@@ -15,7 +15,7 @@ rule "pgrest"
       i : Inbound 1==1;
    }
    then{
-         const postgrest = new supabase.PostgrestClient( `http:\/\/www.xyz.com:3000` 
+         const postgrest = new supabase.PostgrestClient( `http:\/\/www.xyz.com:3000`, { schema:"public" }  );
 
          postgrest.from('abc_tb1')
          .select()
